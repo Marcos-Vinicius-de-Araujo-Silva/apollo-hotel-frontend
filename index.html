@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#703800",
+              "surface-bright": "#393939",
+              "surface-tint": "#ffb4a8",
+              "tertiary-fixed-dim": "#ffb781",
+              "surface-container": "#201f1f",
+              "surface": "#131313",
+              "on-secondary": "#00391f",
+              "secondary-container": "#165132",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary-container": "#ffe4d3",
+              "on-background": "#e5e2e1",
+              "on-primary-container": "#ffe3de",
+              "on-primary": "#690000",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-container": "#d40000",
+              "on-surface": "#e5e2e1",
+              "inverse-primary": "#c00000",
+              "surface-dim": "#131313",
+              "inverse-on-surface": "#313030",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary": "#4e2500",
+              "on-primary-fixed": "#410000",
+              "error-container": "#93000a",
+              "surface-container-low": "#1c1b1b",
+              "outline": "#af8781",
+              "secondary": "#98d4ac",
+              "tertiary": "#ffb781",
+              "on-secondary-fixed-variant": "#165132",
+              "surface-container-highest": "#353534",
+              "primary": "#ffb4a8",
+              "secondary-fixed": "#b4f0c7",
+              "on-secondary-fixed": "#002110",
+              "tertiary-fixed": "#ffdcc5",
+              "surface-variant": "#353534",
+              "error": "#ffb4ab",
+              "on-primary-fixed-variant": "#930000",
+              "background": "#131313",
+              "on-secondary-container": "#87c29b",
+              "tertiary-container": "#a25400",
+              "on-error": "#690005",
+              "outline-variant": "#5e3f3a",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-fixed": "#301400",
+              "on-surface-variant": "#e8bcb5",
+              "primary-fixed": "#ffdad4",
+              "primary-fixed-dim": "#ffb4a8",
+              "secondary-fixed-dim": "#98d4ac"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .carbon-texture {
+            background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+            background-size: 4px 4px;
+        }
+        .rosso-gradient {
+            background: linear-gradient(45deg, #ffb4a8 0%, #d40000 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl shadow-[0_24px_48px_rgba(0,0,0,0.4)] flex justify-between items-center px-12 py-6 w-full">
+<div class="text-2xl font-['Noto_Serif'] italic tracking-tighter text-red-500">Paddock de Seda</div>
+<div class="hidden md:flex gap-10">
+<a class="font-['Noto_Serif'] tracking-[0.05em] uppercase text-sm text-neutral-400 hover:text-white transition-colors" href="#">Heritage</a>
+<a class="font-['Noto_Serif'] tracking-[0.05em] uppercase text-sm text-red-400 border-b border-red-500 pb-1" href="#">Suites</a>
+<a class="font-['Noto_Serif'] tracking-[0.05em] uppercase text-sm text-neutral-400 hover:text-white transition-colors" href="#">Gastronomy</a>
+<a class="font-['Noto_Serif'] tracking-[0.05em] uppercase text-sm text-neutral-400 hover:text-white transition-colors" href="#">Experiences</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-['Noto_Serif'] tracking-[0.05em] uppercase text-sm text-neutral-400 hover:text-white transition-colors">Concierge</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-['Noto_Serif'] tracking-[0.05em] uppercase text-sm hover:opacity-90 transition-all">Book Now</button>
+</div>
+</nav>
+<!-- SideNavBar (Suppressed on focused detail pages) -->
+<main class="pt-24 min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" data-alt="luxury hotel suite interior with deep red velvet upholstery, dark wood accents, and panoramic view of Monaco grand prix track at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeluA8_3S_PA-KPy08rZgB9KRWUO0O5G9N-vX_j_cw54082ku65dg4ImncKcXB381zN95YcZEhU5sggQk0yeZtQCNhV6arauHPJGbWPYDfzgfSvFGvqETv8cRvn6gtzBsZxtIKTP_4t3E7ZDhn3HVSCUmQ7kd5DJJvD_xXX3fE3hQ9AqJ5a5fDLqSn9702V-X545Y1UMtxbW1YjCVSVIhyAsedeTX8Vwwy4pDHLu9IC8fFgmKWmmCcXBbs9O2xkAmrEt5Ze_Bzb71Z"/>
+<div class="absolute bottom-20 left-12 z-20 max-w-4xl">
+<span class="font-label text-primary text-sm tracking-[0.3em] uppercase mb-4 block">The Kinetic Atelier</span>
+<h1 class="font-headline text-7xl md:text-9xl font-bold tracking-tighter leading-none mb-6">Scuderia <span class="italic text-primary-container">Ferrari</span></h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                    Luxo Emocional. An immersive sanctuary where the high-octane soul of Maranello meets the quiet opulence of a Monegasque estate. 
+                </p>
+</div>
+<!-- Floating Quick Specs -->
+<div class="absolute bottom-20 right-12 z-20 hidden lg:flex flex-col gap-4 bg-surface-container/70 backdrop-blur-md p-8 border-l-2 border-primary">
+<div class="flex items-center justify-between gap-12">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Area</span>
+<span class="font-body font-bold text-xl">185 m²</span>
+</div>
+<div class="flex items-center justify-between gap-12">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">View</span>
+<span class="font-body font-bold text-xl">Rascasse Corner</span>
+</div>
+<div class="flex items-center justify-between gap-12">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Vibe</span>
+<span class="font-body font-bold text-xl text-primary">Rosso Corsa</span>
+</div>
+</div>
+</section>
+<!-- The Experience: Bento Layout -->
+<section class="px-12 py-32 grid grid-cols-1 md:grid-cols-12 gap-6 bg-surface-container-lowest">
+<div class="md:col-span-8 flex flex-col gap-6">
+<div class="bg-surface-container-low p-12 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-primary text-4xl opacity-20">speed</span>
+</div>
+<h2 class="font-headline text-4xl mb-6">The Rosso Corsa Pulse</h2>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl">
+                        Designed for the collector of moments. The suite features bespoke furnishings upholstered in authentic Rosso Corsa velvet, accented by brushed carbon fiber textures that trace the room's geometry like a race chassis.
+                    </p>
+<div class="grid grid-cols-2 gap-8 pt-8 border-t border-white/5">
+<div>
+<span class="font-label text-xs text-primary tracking-widest uppercase block mb-2">Technical Detail</span>
+<p class="text-sm">Active noise cancellation glazing tuned to isolate engine symphony.</p>
+</div>
+<div>
+<span class="font-label text-xs text-primary tracking-widest uppercase block mb-2">Materiality</span>
+<p class="text-sm">Hand-stitched leather panels with Ferrari-grade contrast stitching.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container p-10 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl mb-4 italic">Private Wine Cellar</h3>
+<p class="text-on-surface-variant text-sm mb-6">A curated selection of Italian vintages and rare champagnes, temperature-controlled behind smart-glass.</p>
+</div>
+<button class="text-secondary font-label text-xs tracking-widest uppercase flex items-center gap-2 hover:gap-4 transition-all">
+                            Explore Vintages <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="bg-primary-container p-10 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-5xl mb-4" data-weight="fill">verified_user</span>
+<h3 class="font-headline text-2xl mb-2">Concierge Elite</h3>
+<p class="text-on-primary-container text-sm">24/7 dedicated trackside assistant for F1 paddock access and dinner reservations.</p>
+</div>
+</div>
+</div>
+<!-- Image Gallery Aside -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="h-64 relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close up of red velvet furniture and carbon fiber desk in a luxury suite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Z1USLa1pWkCsCHKEDCFfMxKVH8h7OkcUAYe9STuIhQn-Qmy5sEScpoj5vFGuTsE4ARo1crxjybLc9zl-k7_opIlYePBZDDXSkm81kQK4LW37DB0pU0hXEVgeCJbcSDGiY8kSx5eXpL3lkicFh5cdHJoKEID2BmaYNBlv5nBB2Q06gl855_EInNuzApBcxBd9GyHWia_Z9uKhuY4gDLpkeNCQruraJBcEUOXFnUVSDBHLfXnQU8FnvcIiMpjwKPJbx6fvt5PNZTbI"/>
+</div>
+<div class="h-64 relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ultra-modern bathroom with black marble and red accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAnd55XmFRJ7274Mc7TSMXzkeH2FvS4Uij4XI6EcTeAF659460upq0MQGeuZ5nysTKeDCbyqwScScuBswFeDl09mAKkr5Z71go0-_JhSfMj8wyEcy-Ga5hWW94rYruT4PMX-ZbDiksO7xcECL1Cb-pzkV7GnobsYyvnBQ46h53cJz1tlMtfRgg75mm5O4rnGSu05wR4hrfjl7y3spzGFw9SmlyFgN_7VkSxaUJtexiz1PNc3l1bUwGAIUMVwGB7DzxW2H6hTfByVlU"/>
+</div>
+<div class="flex-1 bg-surface-container-high p-8 flex flex-col justify-end border-r-4 border-primary">
+<h4 class="font-headline text-xl italic mb-2">"Pure Velocity"</h4>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">
+                        "The transition from the roar of the paddock to the absolute silence of the Ferrari suite is a masterpiece of engineering."
+                    </p>
+<span class="font-label text-[10px] mt-4 uppercase tracking-[0.2em] text-primary">— Charles L.</span>
+</div>
+</div>
+</section>
+<!-- Technical Specs & Amenities -->
+<section class="px-12 py-32 bg-background">
+<div class="mb-20">
+<h2 class="font-headline text-5xl mb-4">Engineering Comfort</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<span class="font-label text-xs text-primary uppercase tracking-widest block">The Structure</span>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">aspect_ratio</span> 185m² Bi-level Layout</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">bed</span> California King Memory Mesh</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">deck</span> 40m² Private Terrace</li>
+</ul>
+</div>
+<div class="space-y-6">
+<span class="font-label text-xs text-primary uppercase tracking-widest block">Connectivity</span>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">wifi</span> 10Gbps dedicated fiber</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">tv</span> 98" 8K Micro-LED Display</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">speaker</span> Devialet Phantom Audio</li>
+</ul>
+</div>
+<div class="space-y-6">
+<span class="font-label text-xs text-primary uppercase tracking-widest block">Wellness</span>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">hot_tub</span> Steam-Room Hammam</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">water_drop</span> Rain-sky sensory shower</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">spa</span> In-suite therapy room</li>
+</ul>
+</div>
+<div class="space-y-6">
+<span class="font-label text-xs text-primary uppercase tracking-widest block">The Cellar</span>
+<ul class="space-y-4 font-body text-sm text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">liquor</span> 24-bottle Sommelier Pick</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">coffee</span> Lever-pull espresso bar</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">glass_cup</span> Crystal glassware set</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="relative py-40 px-12 overflow-hidden flex flex-col items-center justify-center text-center">
+<div class="absolute inset-0 carbon-texture opacity-10"></div>
+<div class="relative z-10 max-w-3xl">
+<h2 class="font-headline text-6xl mb-10">Secure Your <span class="italic">Pole Position</span></h2>
+<p class="font-body text-lg mb-12 text-on-surface-variant">
+                    Experience the ultimate synthesis of Monaco tradition and Scuderia Ferrari performance. Availability is strictly limited to 12 sessions per season.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="rosso-gradient text-on-primary font-headline text-xl px-12 py-5 shadow-2xl hover:scale-105 transition-all">
+                        Reserve this Suite
+                    </button>
+<button class="border border-outline-variant text-on-surface font-label uppercase tracking-widest text-sm px-12 py-5 hover:bg-white/5 transition-all">
+                        Request Private Session
+                    </button>
+</div>
+</div>
+</section>
+<!-- Reviews / Social Proof -->
+<section class="px-12 py-24 border-t border-white/5">
+<div class="flex items-center justify-between mb-16">
+<h3 class="font-headline text-3xl">Guest Testimonials</h3>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="opacity-80">
+<p class="italic text-sm leading-relaxed mb-4">"The attention to high-performance details is staggering. It feels like staying inside a racing machine but with the comfort of a palace."</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Lifestyle Curator, London</span>
+</div>
+<div class="opacity-80">
+<p class="italic text-sm leading-relaxed mb-4">"Watching the Grand Prix from the private terrace while enjoying a rare vintage from the suite's cellar was the highlight of our year."</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">F1 Enthusiast, Miami</span>
+</div>
+<div class="opacity-80">
+<p class="italic text-sm leading-relaxed mb-4">"Pure Luxo Emocional. Every texture, every sound, and every view is curated to make you feel the spirit of the Scuderia."</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Design Director, Milan</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 px-16 bg-neutral-950 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-12 items-end">
+<div class="flex flex-col gap-6">
+<div class="text-xl font-['Noto_Serif'] text-white">Paddock de Seda</div>
+<p class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-600 uppercase">
+                The Kinetic Atelier. Monte Carlo Heritage. Maranello Engineering.
+            </p>
+</div>
+<div class="flex gap-8 justify-center">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-600 hover:text-red-400 transition-opacity" href="#">Press</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-600 hover:text-red-400 transition-opacity" href="#">Careers</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-600 hover:text-red-400 transition-opacity" href="#">Contact</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-600 hover:text-red-400 transition-opacity" href="#">Sustainability</a>
+</div>
+<div class="text-right">
+<p class="font-['Space_Grotesk'] text-[10px] tracking-widest text-neutral-600">
+                © 2024 PADDOCK DE SEDA. THE KINETIC ATELIER.
+            </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,28 @@
+# Dependências (caso use pacotes via npm futuramente)
+node_modules/
+package-lock.json
+
+# Arquivos de Sistema
+.DS_Store
+Thumbs.db
+
+# Configurações de Editores (VS Code, JetBrains, etc)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pasta de Build/Produção (se você usa algum bundler como Vite ou Webpack)
+dist/
+build/
+out/
+
+# Variáveis de ambiente (Segurança)
+.env
+.env.local
