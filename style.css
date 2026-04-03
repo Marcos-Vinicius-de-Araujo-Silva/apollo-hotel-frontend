@@ -1,0 +1,90 @@
+/* //////////////////////header////////////// */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre+Baskerville', serif;
+}
+
+/* Bloco Header */
+.header {
+    background-color: #8B3A31; /* Tom marrom avermelhado da imagem */
+    padding: 20px 0;
+    color: #FFFFFF;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Elemento Logo */
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    line-height: 0.9;
+    row-gap: 5px;
+}
+
+.header__logo-brand {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.header__logo-sub {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Elemento Nav */
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    gap: 60px; /* Espaçamento entre os itens */
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+    color: #F2A49E;
+}
+
+/* Elemento Botão com Modificador */
+.header__button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    transition: transform 0.2s;
+}
+
+.header__button--reservation {
+    background-color: #5D241E; /* Tom mais escuro do botão */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.header__button--reservation:hover {
+    background-color: #4A1D18;
+    transform: translateY(-2px);
+}
+
+/* /////////////////////////////////end header//////////////////////// */
