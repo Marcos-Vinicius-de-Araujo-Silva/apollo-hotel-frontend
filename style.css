@@ -98,4 +98,28 @@ body {
     max-width: 100%;
     height: 810px;
     margin: 0 auto;
+    position: relative;
+}
+
+#main_content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra escura para melhorar a legibilidade */
+    z-index: 1; /* Coloca a sombra atrás do conteúdo */
+}
+
+/* Título da página home */
+.h1_menu {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 130px auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+    color: white;
+    font-size: 22px;
 }
