@@ -88,3 +88,14 @@ body {
 }
 
 /* /////////////////////////////////end header//////////////////////// */
+
+/* //////////////////////main//////////////////////// */
+#main_content {
+    background-image: url(./assets/home-image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    max-width: 100%;
+    height: 810px;
+    margin: 0 auto;
+}
