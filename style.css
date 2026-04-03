@@ -157,5 +157,75 @@ body {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
-/* ////////////////////// Fim Home page .1////////////////////// */
+/* ////////////////////// Fim Home1 ////////////////////// */
+/* ////////////////////// Home2 ////////////////////// */
+#home2 {
+    width: 100%;
+    height: 570px;
+    background-color: #F1A49E;
+}
 
+.home2__title {
+    color: #8C3933;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.home2__figures {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home2__img {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: auto;
+    margin: 0 80px;
+
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.home2__img:hover {
+    transform: translateY(-8px);
+}
+
+.home2__img--image1, 
+.home2__img--image2, 
+.home2__img--image3 {
+    height: 264px;
+    width: 340px;
+}
+
+.home2__img--image1 {
+    background-image: url(./assets/conforto-image.jpg);
+    background-size: cover;
+    background-position: -50px center;
+}
+.home2__img--image2 {
+    background-image: url(./assets/localizacao-image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.home2__img--image3 {
+    background-image: url(./assets/entretenimento-image.jpg);
+    background-size: 250%;
+    background-position: -240px center;
+}
+
+.home2__img p {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: #6A2E2A;
+    font-size: 1.1rem;
+}
