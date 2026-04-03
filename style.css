@@ -88,3 +88,50 @@ body {
 }
 
 /* /////////////////////////////////end header//////////////////////// */
+
+/* //////////////////////main//////////////////////// */
+#main_content {
+    background-image: url(./assets/home-image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    max-width: 100%;
+    height: 810px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main_content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra escura para melhorar a legibilidade */
+    z-index: 1; /* Coloca a sombra atrás do conteúdo */
+}
+
+/* Título da página home */
+.h1_menu {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    width: 100%;
+    margin: 130px auto 0 auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    text-align: center;
+    color: white;
+    font-family: 'Crimson Pro', serif;
+    font-size: 32px;
+}
+
+/* Subtítulo da página home */
+.h2_menu {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 50px auto 20px auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
