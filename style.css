@@ -80,6 +80,8 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
 }
 
 .header__button--reservation:hover {
@@ -90,18 +92,19 @@ body {
 /* /////////////////////////////////end header//////////////////////// */
 
 /* //////////////////////main//////////////////////// */
-#main_content {
+/* //////////////////////Home page .1////////////////////// */
+#home1 {
     background-image: url(./assets/home-image.jpg);
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
     max-width: 100%;
-    height: 810px;
+    height: 818px;
     margin: 0 auto;
     position: relative;
 }
 
-#main_content::before {
+#home1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -112,26 +115,47 @@ body {
     z-index: 1; /* Coloca a sombra atrás do conteúdo */
 }
 
+#home1--align {
+    margin: 190px 0 0 0;
+}
+
 /* Título da página home */
-.h1_menu {
+.home1__h1 {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
-    margin: 130px auto 0 auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    margin: 120px auto 0 auto; /* Centraliza horizontalmente e adiciona espaço superior */
     text-align: center;
     color: white;
     font-family: 'Crimson Pro', serif;
-    font-size: 32px;
+    font-size: 36px;
 }
 
 /* Subtítulo da página home */
-.h2_menu {
+.home1__h2 {
     position: relative;
     z-index: 2;
-    max-width: 500px;
-    margin: 50px auto 20px auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    max-width: 550px;
+    margin: 45px auto 25px auto; /* Centraliza horizontalmente e adiciona espaço superior */
     text-align: center;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
 }
+
+/* Botão centralizado na home */
+.home1__button--align {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 70px;
+}
+
+.home1__button--enlarge {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+/* ////////////////////// Fim Home page .1////////////////////// */
+
