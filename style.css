@@ -93,7 +93,7 @@ body {
 
 /* //////////////////////main//////////////////////// */
 /* //////////////////////Home page .1////////////////////// */
-#main_content {
+#home1 {
     background-image: url(./assets/home-image.jpg);
     background-size: cover;
     background-position: center;
@@ -104,7 +104,7 @@ body {
     position: relative;
 }
 
-#main_content::before {
+#home1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -115,12 +115,12 @@ body {
     z-index: 1; /* Coloca a sombra atrás do conteúdo */
 }
 
-#centralizar_home {
+#home1--align {
     margin: 190px 0 0 0;
 }
 
 /* Título da página home */
-.h1_menu {
+.home1__h1 {
     position: relative;
     z-index: 2;
     max-width: 900px;
@@ -133,7 +133,7 @@ body {
 }
 
 /* Subtítulo da página home */
-.h2_menu {
+.home1__h2 {
     position: relative;
     z-index: 2;
     max-width: 550px;
@@ -144,7 +144,7 @@ body {
 }
 
 /* Botão centralizado na home */
-.align_home_center_button {
+.home1__button--align {
     display: flex;
     justify-content: center;
     position: relative;
@@ -152,7 +152,7 @@ body {
     margin-top: 70px;
 }
 
-.enlage_button {
+.home1__button--enlarge {
     padding: 15px 30px;
     font-size: 1.2rem;
     transition: transform 0.3s ease;
