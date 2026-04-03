@@ -116,10 +116,22 @@ body {
 .h1_menu {
     position: relative;
     z-index: 2;
-    max-width: 600px;
-    margin: 130px auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    max-width: 800px;
+    width: 100%;
+    margin: 130px auto 0 auto; /* Centraliza horizontalmente e adiciona espaço superior */
     text-align: center;
-    font-family: 'Crimson Pro', serif;
     color: white;
-    font-size: 22px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 32px;
+}
+
+/* Subtítulo da página home */
+.h2_menu {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 50px auto 20px auto; /* Centraliza horizontalmente e adiciona espaço superior */
+    text-align: center;
+    color: white;
+    font-size: 24px;
 }
