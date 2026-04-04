@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- //////////////////modalForm//////////////////// -->
+    <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeForm">&times;</span>
+            <div class="logo--form">
+                <span class="header__logo-brand">Apollo</span>
+                <br>
+                <span class="header__logo-sub">Hotel</span>
+            </div>
+            <form class="modal__form" id="reservationForm">
+                <label>Nome Completo</label>
+                <input type="text" required placeholder="Digite aqui">
+
+                <label>Data de entrada</label>
+                <input type="date" required>
+
+                <label>Data de saída</label>
+                <input type="date" required>
+
+                <label>Categoria</label>
+                <select>
+                    <option>Suíte Prince</option>
+                    <option>Suíte Master</option>
+                </select>
+                
+                <div class="stepper">
+                    <button type="button" onclick="changeValue(-1)">−</button>
+                    <input type="number" id="adults" value="2" min="1" max="10" readonly>
+                    <button type="button" onclick="changeValue(1)">+</button>
+                </div>
+
+                <button type="submit" class="button button--reservation form__button">Fazer Reserva</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalSuccess" class="modal">
+        <div class="modal-content success-box">
+            <span class="close" id="closeSuccess">&times;</span>
+            <h2>Reserva confirmada</h2>
+            <p>Obrigado por escolher o Apollo Hotel!</p>
+        </div>
+    </div>
+    <!-- //////////////////modalForm//////////////////// -->
 
     <header class="header">
         <div class="header__container">
@@ -26,38 +73,25 @@
             </nav>
 
             <div class="header__actions">
-                <button class="header__button header__button--reservation" id="btnReserva">
+                <button class="button button--reservation">
                     Fazer Reserva
                 </button>
             </div>
         </div>
     </header>
 
-    <script src="script.js"></script>
-
     <!-- /////////////// Home page /////////////// -->
-    <main>
-        <!--////////// Home1 //////////-->
-        <div id="home1">
-            <div id="home1--align">
-                <div class="home1__h1">
-                    <h1>Seu próximo hotel favorito</h1>
-                </div>
-
-                <div class="home1__h2">
-                    <h2>No coração de Mônaco, torne sua viagem inesquecível</h2>
-                </div>
-
-                <div class="header__actions home1__button--align">
-                    <button class="header__button header__button--reservation home1__button--enlarge" id="btnReserva">
-                        Fazer Reserva
-                    </button>
-                </div>
+    <main class="main">
+        <section class="main__section">
+            <div class="main__content">
+                <h1 class="main__h1">Seu próximo hotel favorito</h1>
+                <h2 class="main__h2">No coração de Mônaco, torne<br>sua viagem inesquecível</h2>
+                <button class="button button--reservation">Fazer Reserva</button>
             </div>
-        </div>
-
-        <!--////////// Home2 //////////-->
-        <div style="width: 500px; height: 912px; background-color: red;"></div>
+        </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

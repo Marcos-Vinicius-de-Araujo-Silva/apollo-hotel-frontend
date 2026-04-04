@@ -1,4 +1,6 @@
-/* //////////////////////header////////////// */
+:root {
+    --cor-primaria: #F2A49E;
+}
 
 /* Reset básico */
 * {
@@ -11,9 +13,12 @@ body {
     font-family: 'Libre+Baskerville', serif;
 }
 
+/* //////////////////////header////////////// */
+
 /* Bloco Header */
 .header {
-    background-color: #8B3A31; /* Tom marrom avermelhado da imagem */
+    background-color: #8B3A31;
+    /* Tom marrom avermelhado da imagem */
     padding: 20px 0;
     color: #FFFFFF;
 }
@@ -50,7 +55,8 @@ body {
 .header__nav-list {
     list-style: none;
     display: flex;
-    gap: 60px; /* Espaçamento entre os itens */
+    gap: 60px;
+    /* Espaçamento entre os itens */
 }
 
 .header__nav-link {
@@ -61,101 +67,209 @@ body {
 }
 
 .header__nav-link:hover {
-    color: #F2A49E;
+    color: var(--cor-primaria);
 }
 
 /* Elemento Botão com Modificador */
-.header__button {
+.button {
     cursor: pointer;
     border: none;
     font-family: inherit;
-    transition: transform 0.2s;
+    transition: color 0.2s;
 }
 
-.header__button--reservation {
-    background-color: #5D241E; /* Tom mais escuro do botão */
+.button--reservation {
+    background-color: #5D241E;
+    /* Tom mais escuro do botão */
     color: #FFFFFF;
     padding: 12px 25px;
     border-radius: 8px;
     font-size: 1.1rem;
     font-weight: 700;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    position: relative;
-    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s
 }
 
-.header__button--reservation:hover {
+.button--reservation:hover {
     background-color: #4A1D18;
-    transform: translateY(-2px);
+    color: var(--cor-primaria);
 }
 
 /* /////////////////////////////////end header//////////////////////// */
 
 /* //////////////////////main//////////////////////// */
-/* //////////////////////Home page .1////////////////////// */
-#home1 {
+.main__section {
     background-image: url(./assets/home-image.jpg);
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
     max-width: 100%;
-    height: 818px;
+    height: 810px;
     margin: 0 auto;
     position: relative;
 }
 
-#home1::before {
+.main__section::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Sombra escura para melhorar a legibilidade */
-    z-index: 1; /* Coloca a sombra atrás do conteúdo */
-}
-
-#home1--align {
-    margin: 190px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Sombra escura para melhorar a legibilidade */
+    z-index: 1;
+    /* Coloca a sombra atrás do conteúdo */
 }
 
 /* Título da página home */
-.home1__h1 {
+.main__content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
-    width: 100%;
-    margin: 120px auto 0 auto; /* Centraliza horizontalmente e adiciona espaço superior */
-    text-align: center;
+    margin: auto;
     color: white;
-    font-family: 'Crimson Pro', serif;
-    font-size: 36px;
-}
-
-/* Subtítulo da página home */
-.home1__h2 {
-    position: relative;
-    z-index: 2;
-    max-width: 550px;
-    margin: 45px auto 25px auto; /* Centraliza horizontalmente e adiciona espaço superior */
-    text-align: center;
-    color: white;
-    font-size: 28px;
-}
-
-/* Botão centralizado na home */
-.home1__button--align {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 40px;
+}
+
+.main__h1,
+.main__h2 {
+    font-family: 'Crimson Pro', serif;
+}
+
+.main__h1 {
+    font-size: 3rem;
+}
+
+.main__h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+/*////////////////////////modal///////////////////////// */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* A caixa branca do formulário */
+.modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 20px;
+    width: 30vw;
+    border-radius: 8px;
     position: relative;
-    z-index: 2;
-    margin-top: 70px;
+    font-family: serif;
 }
 
-.home1__button--enlarge {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
-/* ////////////////////// Fim Home page .1////////////////////// */
 
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: #54221e;
+}
+
+.form__button {
+    width: 50%;
+    align-self: center;
+}
+
+.logo--form {
+    color: #8B3A31;
+    text-align: center;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    outline: none;
+    /* Remove a linha azul padrão do navegador */
+    transition: 0.3s;
+    /* Suaviza a mudança de cor */
+}
+
+/* Efeito quando o usuário clica no campo */
+input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* Coloca o label acima do input */
+    margin-bottom: 15px;
+}
+
+/* Estilo para o stepper de quantidade de hóspedes */
+
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 45px;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    /* Cantos arredondados */
+    padding: 0 10px;
+}
+
+.stepper button {
+    background: none;
+    border: none;
+    color: var(--text-grey);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: color 0.2s;
+}
+
+.stepper button:hover {
+    color: var(--primary-color);
+}
+
+.stepper input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    color: var(--text-grey);
+    outline: none;
+    background: transparent;
+    appearance: textfield;
+    /* Remove setas no Firefox */
+}
+
+/* Remove setas no Chrome, Safari e Edge */
+.stepper input::-webkit-outer-spin-button,
+.stepper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
