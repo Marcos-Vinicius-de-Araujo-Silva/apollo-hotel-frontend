@@ -1,6 +1,4 @@
-/* //////////////////////header////////////// */
-
-/* Reset básico */
+/* //////////////////// Reset Básico //////////////////// */
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +9,9 @@ body {
     font-family: 'Libre+Baskerville', serif;
 }
 
-/* Bloco Header */
+/* //////////////////// Header //////////////////// */
 .header {
-    background-color: #8B3A31; /* Tom marrom avermelhado da imagem */
+    background-color: #8B3A31;
     padding: 20px 0;
     color: #FFFFFF;
 }
@@ -27,7 +25,6 @@ body {
     padding: 0 20px;
 }
 
-/* Elemento Logo */
 .header__logo {
     display: flex;
     flex-direction: column;
@@ -46,11 +43,10 @@ body {
     letter-spacing: 1px;
 }
 
-/* Elemento Nav */
 .header__nav-list {
     list-style: none;
     display: flex;
-    gap: 60px; /* Espaçamento entre os itens */
+    gap: 60px;
 }
 
 .header__nav-link {
@@ -64,7 +60,6 @@ body {
     color: #F2A49E;
 }
 
-/* Elemento Botão com Modificador */
 .header__button {
     cursor: pointer;
     border: none;
@@ -73,7 +68,7 @@ body {
 }
 
 .header__button--reservation {
-    background-color: #5D241E; /* Tom mais escuro do botão */
+    background-color: #5D241E;
     color: #FFFFFF;
     padding: 12px 25px;
     border-radius: 8px;
@@ -88,11 +83,10 @@ body {
     background-color: #4A1D18;
     transform: translateY(-2px);
 }
+/* //////////////////// End Header //////////////////// */
 
-/* /////////////////////////////////end header//////////////////////// */
-
-/* //////////////////////main//////////////////////// */
-/* //////////////////////Home page .1////////////////////// */
+/* //////////////////// Main //////////////////// */
+/* ////////// Home Page 1/4 ////////// */
 #home1 {
     background-image: url(./assets/home-image.jpg);
     background-size: cover;
@@ -157,8 +151,8 @@ body {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
-/* ////////////////////// Fim Home1 ////////////////////// */
-/* ////////////////////// Home2 ////////////////////// */
+/* ////////// End Home Page 1/4 ////////// */
+/* ////////// Home Page 2/4 ////////// */
 #home2 {
     width: 100%;
     height: 570px;
@@ -229,3 +223,4 @@ body {
     color: #6A2E2A;
     font-size: 1.1rem;
 }
+/* ////////// End Home Page 2/4 ////////// */
