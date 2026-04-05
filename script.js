@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   reservationForm.addEventListener('submit', (e) => {
     e.preventDefault();
     modalForm.style.display = 'none';
-    modalSuccess.style.display = 'block';
+    modalSuccess.style.display = 'flex';
     reservationForm.reset();
   });
 

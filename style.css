@@ -143,7 +143,7 @@ body {
 }
 
 .stepper input {
-    width: 48px;
+    width: 60px;
     text-align: center;
     border: none;
     background: transparent;
@@ -204,46 +204,6 @@ input:focus {
     flex-direction: column;
     /* Coloca o label acima do input */
     margin-bottom: 15px;
-}
-
-/* Estilo para o stepper de quantidade de hóspedes */
-
-.stepper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 150px;
-    height: 45px;
-    border: 2px solid var(--primary-color);
-    border-radius: 12px;
-    /* Cantos arredondados */
-    padding: 0 10px;
-}
-
-.stepper button {
-    background: none;
-    border: none;
-    color: var(--text-grey);
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0 10px;
-    transition: color 0.2s;
-}
-
-.stepper button:hover {
-    color: var(--primary-color);
-}
-
-.stepper input {
-    width: 40px;
-    text-align: center;
-    border: none;
-    font-size: 18px;
-    color: var(--text-grey);
-    outline: none;
-    background: transparent;
-    appearance: textfield;
-    /* Remove setas no Firefox */
 }
 
 /* Remove setas no Chrome, Safari e Edge */
