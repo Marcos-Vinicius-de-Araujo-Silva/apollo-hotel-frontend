@@ -78,10 +78,10 @@ body {
 }
 
 .modal__form label {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-grey);
-    margin-bottom: 8px;
+    margin-bottom: -6px;
 }
 
 .modal__form input,
