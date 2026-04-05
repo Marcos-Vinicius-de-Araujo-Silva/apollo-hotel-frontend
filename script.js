@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reservationForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    
+    // Obter las fechas
+    const inputs = reservationForm.querySelectorAll('input[type="date"]');
+    const checkInDate = new Date(inputs[0].value);
+    const checkOutDate = new Date(inputs[1].value);
+    
+    // Validar que la fecha de entrada sea anterior a la de salida
+    if (checkInDate >= checkOutDate) {
+      alert('A data de entrada deve ser anterior à data de saída.');
+      return;
+    }
+    
     modalForm.style.display = 'none';
     modalSuccess.style.display = 'flex';
     reservationForm.reset();
