@@ -22,22 +22,40 @@
                 <label>Nome Completo</label>
                 <input type="text" required placeholder="Digite aqui">
 
-                <label>Data de entrada</label>
-                <input type="date" required>
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Data de entrada</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="field-group">
+                        <label>Data de saída</label>
+                        <input type="date" required>
+                    </div>
+                </div>
 
-                <label>Data de saída</label>
-                <input type="date" required>
-
-                <label>Categoria</label>
+                <label>Categoria de acomodação</label>
                 <select>
                     <option>Suíte Prince</option>
                     <option>Suíte Master</option>
                 </select>
                 
-                <div class="stepper">
-                    <button type="button" onclick="changeValue(-1)">−</button>
-                    <input type="number" id="adults" value="2" min="1" max="10" readonly>
-                    <button type="button" onclick="changeValue(1)">+</button>
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Adultos</label>
+                        <div class="stepper">
+                            <button type="button" onclick="changeValue(-1, 'adults')">−</button>
+                            <input type="number" id="adults" name="adults" value="2" min="1" max="10" readonly>
+                            <button type="button" onclick="changeValue(1, 'adults')">+</button>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <label>Crianças</label>
+                        <div class="stepper">
+                            <button type="button" onclick="changeValue(-1, 'children')">−</button>
+                            <input type="number" id="children" name="children" value="0" min="0" max="10" readonly>
+                            <button type="button" onclick="changeValue(1, 'children')">+</button>
+                        </div>
+                    </div>
                 </div>
 
                 <button type="submit" class="button form__button">Fazer Reserva</button>
@@ -136,6 +154,9 @@
         <!-- ////////// End Home Page 2/4 ////////// -->
 
         <!-- ////////// Home Page 3/4 ////////// -->
+         <section id="home3">
+
+         </section>
     </main>
 
     <script src="script.js"></script>

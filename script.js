@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   botoesAbrir.forEach(botao => {
     botao.addEventListener('click', () => {
-      modalForm.style.display = 'block';
+      modalForm.style.display = 'flex';
     });
   });
 
@@ -34,13 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ///////// Função para alterar o valor do input de adultos
 
-function changeValue(delta) {
-  const input = document.getElementById('adults');
-  let currentValue = parseInt(input.value);
-  let newValue = currentValue + delta;
+function changeValue(delta, fieldId) {
+  const input = document.getElementById(fieldId);
+  if (!input) return;
 
-  // Verifica os limites (mínimo 1, por exemplo)
-  if (newValue >= 1 && newValue <= 10) {
+  let currentValue = parseInt(input.value) || 0;
+  let newValue = currentValue + delta;
+  const min = parseInt(input.min) || 0;
+  const max = parseInt(input.max) || 10;
+
+  if (newValue >= min && newValue <= max) {
     input.value = newValue;
   }
 }
