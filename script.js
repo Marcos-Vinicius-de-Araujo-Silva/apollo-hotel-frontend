@@ -41,6 +41,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.target === modalForm) modalForm.style.display = 'none';
     if (event.target === modalSuccess) modalSuccess.style.display = 'none';
   });
+
+  const galleryImage = document.getElementById('galleryImage');
+  const galleryCaption = document.getElementById('galleryCaption');
+  const prevButton = document.querySelector('.gallery__button--prev');
+  const nextButton = document.querySelector('.gallery__button--next');
+
+  const galleryItems = [
+    { src: './assets/galeria1.jpg', caption: 'Fachada iluminada do hotel à noite' },
+    { src: './assets/conforto-image.jpg', caption: 'Suíte confortável com decoração acolhedora' },
+    { src: './assets/entretenimento-image.jpg', caption: 'Área de entretenimento com luz ambiente' },
+    { src: './assets/home-image.jpg', caption: 'Vista panorâmica do hotel' },
+    { src: './assets/localizacao-image.jpg', caption: 'Hotel em localização central em Mônaco' },
+    { src: './assets/img1 home2.4.png', caption: 'Atrações esportivas' },
+    { src: './assets/img2 home2.4.png', caption: 'Espaço interno sofisticado e moderno' },
+    { src: './assets/img3 home2.4.png', caption: 'Relaxamento em ambiente exclusivo' },
+    { src: './assets/Home 2.4 background.png', caption: 'Ambiente elegante e acolhedor' },
+  ];
+
+  let galleryIndex = 0;
+
+  const updateGallery = () => {
+    const item = galleryItems[galleryIndex];
+    galleryImage.src = item.src;
+    galleryCaption.textContent = item.caption;
+  };
+
+  prevButton.addEventListener('click', () => {
+    galleryIndex = (galleryIndex + galleryItems.length - 1) % galleryItems.length;
+    updateGallery();
+  });
+
+  nextButton.addEventListener('click', () => {
+    galleryIndex = (galleryIndex + 1) % galleryItems.length;
+    updateGallery();
+  });
+
+  updateGallery();
 });
 
 
