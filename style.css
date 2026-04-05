@@ -377,7 +377,6 @@ input:focus {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
 }
 
 .home2__img {
