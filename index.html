@@ -9,6 +9,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- //////////////////// Modal Form //////////////////// -->
+     <div id="modalForm" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeForm">&times;</span>
+            <div class="logo--form">
+                <span class="header__logo-brand">Apollo</span>
+                <br>
+                <span class="header__logo-sub">Hotel</span>
+            </div>
+            <form class="modal__form" id="reservationForm">
+                <label>Nome Completo</label>
+                <input type="text" required placeholder="Digite aqui">
+
+                <label>Data de entrada</label>
+                <input type="date" required>
+
+                <label>Data de saída</label>
+                <input type="date" required>
+
+                <label>Categoria</label>
+                <select>
+                    <option>Suíte Prince</option>
+                    <option>Suíte Master</option>
+                </select>
+                
+                <div class="stepper">
+                    <button type="button" onclick="changeValue(-1)">−</button>
+                    <input type="number" id="adults" value="2" min="1" max="10" readonly>
+                    <button type="button" onclick="changeValue(1)">+</button>
+                </div>
+
+                <button type="submit" class="button form__button">Fazer Reserva</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalSuccess" class="modal">
+        <div class="modal-content success-box">
+            <span class="close" id="closeSuccess">&times;</span>
+            <h2>Reserva confirmada</h2>
+            <p>Obrigado por escolher o Apollo Hotel!</p>
+        </div>
+    </div>
+    <!-- //////////////////// End Modal Form //////////////////// -->
+
     <!-- //////////////////// Header //////////////////// -->
     <header class="header">
         <div class="header__container">
@@ -26,7 +71,7 @@
             </nav>
 
             <div class="header__actions">
-                <button class="header__button header__button--reservation" id="btnReserva">
+                <button type="button" class="header__button header__button--reservation open-modal">
                     Fazer Reserva
                 </button>
             </div>
@@ -48,7 +93,7 @@
                 </div>
 
                 <div class="header__actions home1__button--align">
-                    <button class="header__button header__button--reservation home1__button--enlarge" id="btnReserva">
+                            <button type="button" class="header__button header__button--reservation home1__button--enlarge open-modal">
                         Fazer Reserva
                     </button>
                 </div>

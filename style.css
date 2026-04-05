@@ -9,6 +9,129 @@ body {
     font-family: 'Libre+Baskerville', serif;
 }
 
+/* //////////////////// Modal Form //////////////////// */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* A caixa branca do formulário */
+.modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 20px;
+    width: 30vw;
+    border-radius: 8px;
+    position: relative;
+    font-family: serif;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: #54221e;
+}
+
+.form__button {
+    width: 50%;
+    align-self: center;
+}
+
+.logo--form {
+    color: #8B3A31;
+    text-align: center;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    outline: none;
+    /* Remove a linha azul padrão do navegador */
+    transition: 0.3s;
+    /* Suaviza a mudança de cor */
+}
+
+/* Efeito quando o usuário clica no campo */
+input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* Coloca o label acima do input */
+    margin-bottom: 15px;
+}
+
+/* Estilo para o stepper de quantidade de hóspedes */
+
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 45px;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    /* Cantos arredondados */
+    padding: 0 10px;
+}
+
+.stepper button {
+    background: none;
+    border: none;
+    color: var(--text-grey);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: color 0.2s;
+}
+
+.stepper button:hover {
+    color: var(--primary-color);
+}
+
+.stepper input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    color: var(--text-grey);
+    outline: none;
+    background: transparent;
+    appearance: textfield;
+    /* Remove setas no Firefox */
+}
+
+/* Remove setas no Chrome, Safari e Edge */
+.stepper input::-webkit-outer-spin-button,
+.stepper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* //////////////////// End Modal Form //////////////////// */
+
 /* //////////////////// Header //////////////////// */
 .header {
     background-color: #8B3A31;
