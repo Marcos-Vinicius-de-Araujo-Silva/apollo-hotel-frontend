@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-    <!-- //////////////////modalForm//////////////////// -->
-    <div id="modalForm" class="modal">
+    <!-- //////////////////// Modal Form //////////////////// -->
+     <div id="modalForm" class="modal">
         <div class="modal-content">
             <span class="close" id="closeForm">&times;</span>
             <div class="logo--form">
@@ -25,25 +22,43 @@
                 <label>Nome Completo</label>
                 <input type="text" required placeholder="Digite aqui">
 
-                <label>Data de entrada</label>
-                <input type="date" required>
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Data de entrada</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="field-group">
+                        <label>Data de saída</label>
+                        <input type="date" required>
+                    </div>
+                </div>
 
-                <label>Data de saída</label>
-                <input type="date" required>
-
-                <label>Categoria</label>
+                <label>Categoria de acomodação</label>
                 <select>
                     <option>Suíte Prince</option>
                     <option>Suíte Master</option>
                 </select>
                 
-                <div class="stepper">
-                    <button type="button" onclick="changeValue(-1)">−</button>
-                    <input type="number" id="adults" value="2" min="1" max="10" readonly>
-                    <button type="button" onclick="changeValue(1)">+</button>
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Adultos</label>
+                        <div class="stepper">
+                            <button type="button" onclick="changeValue(-1, 'adults')">−</button>
+                            <input type="number" id="adults" name="adults" value="2" min="1" max="10" readonly>
+                            <button type="button" onclick="changeValue(1, 'adults')">+</button>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <label>Crianças</label>
+                        <div class="stepper">
+                            <button type="button" onclick="changeValue(-1, 'children')">−</button>
+                            <input type="number" id="children" name="children" value="0" min="0" max="10" readonly>
+                            <button type="button" onclick="changeValue(1, 'children')">+</button>
+                        </div>
+                    </div>
                 </div>
 
-                <button type="submit" class="button button--reservation form__button">Fazer Reserva</button>
+                <button type="submit" class="button form__button">Fazer Reserva</button>
             </form>
         </div>
     </div>
@@ -55,8 +70,9 @@
             <p>Obrigado por escolher o Apollo Hotel!</p>
         </div>
     </div>
-    <!-- //////////////////modalForm//////////////////// -->
+    <!-- //////////////////// End Modal Form //////////////////// -->
 
+    <!-- //////////////////// Header //////////////////// -->
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
@@ -66,32 +82,114 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="blog.html" class="header__nav-link">Blog</a></li>
                     <li class="header__nav-item"><a href="#" class="header__nav-link">Sobre Nós</a></li>
                 </ul>
             </nav>
 
             <div class="header__actions">
-                <button class="button button--reservation">
+                <button type="button" class="header__button header__button--reservation open-modal">
                     Fazer Reserva
                 </button>
             </div>
         </div>
     </header>
+    <!-- //////////////////// End Header //////////////////// -->
 
-    <!-- /////////////// Home page /////////////// -->
-    <main class="main">
-        <section class="main__section">
-            <div class="main__content">
-                <h1 class="main__h1">Seu próximo hotel favorito</h1>
-                <h2 class="main__h2">No coração de Mônaco, torne<br>sua viagem inesquecível</h2>
-                <button class="button button--reservation">Fazer Reserva</button>
+    <!-- //////////////////// Home page //////////////////// -->
+    <main>
+        <!-- ////////// Home Page 1/4 ////////// -->
+        <section id="home1">
+            <div id="home1--align">
+                <div class="home1__h1">
+                    <h1>Seu próximo hotel favorito</h1>
+                </div>
+
+                <div class="home1__h2">
+                    <h2>No coração de Mônaco, torne sua viagem inesquecível</h2>
+                </div>
+
+                <div class="header__actions home1__button--align">
+                            <button type="button" class="header__button header__button--reservation home1__button--enlarge open-modal">
+                        Fazer Reserva
+                    </button>
+                </div>
             </div>
         </section>
+        <!-- ////////// End Home Page 1/4 ////////// -->
+
+        <!-- ////////// Home Page 2/4 ////////// -->
+        <section id="home2">
+            <div class="home2__title">
+                <h3><i>Aproveite o melhor de Mônaco</i></h3>
+            </div>
+
+            <div class="home2__figures">
+                <figure class="home2__img">
+                    <div class="home2__img--image1">
+                    </div>
+                    <div>
+                        <p>Conforto</p>
+                    </div>
+                </figure>
+
+                <figure class="home2__img">
+                    <div class="home2__img--image2">
+                    </div>
+                    <div>
+                        <p>Localização</p>
+                    </div>
+                </figure>
+
+                <figure class="home2__img">
+                    <div class="home2__img--image3">
+                    </div>
+                    <div>
+                        <p>Entretenimento</p>
+                    </div>
+                </figure>
+            </div>
+        </section>
+        <!-- ////////// End Home Page 2/4 ////////// -->
+
+        <!-- ////////// Home Page 3/4 ////////// -->
+         <section id="home3">
+            <div class="home3__left-box--align">
+                <h3 class="home3__h3">Conheça nossos pacotes especiais</h3>
+                <p class="home3__p">Descubra várias oportunidades com até 30% de desconto!</p>
+                <button class="home3__button">Saiba mais</button>
+            </div>
+            <div class="home3__right-box--align">
+                <div class="home3__img1"></div>
+                <div class="home3__img12--align">
+                    <div class="home3__img2"></div>
+                    <div class="home3__img3"></div>
+                </div>
+            </div>
+         </section>
+        <!-- ////////// End Home Page 3/4 ////////// -->
+
+        <!-- ////////// Home Page 4/4 ////////// -->
+        <section id="home4">
+            <div class="home4__content">
+                <h3>Galeria</h3>
+                <div class="gallery">
+                    <button type="button" class="gallery__button gallery__button--prev" aria-label="Foto anterior">‹</button>
+                    <div class="gallery__card">
+                        <img id="galleryImage" src="./assets/galeria1.jpg" alt="Galeria Apollo Hotel">
+                        <div class="gallery__caption">
+                            <span id="galleryCaption">Vista noturna do hotel</span>
+                        </div>
+                    </div>
+                    <button type="button" class="gallery__button gallery__button--next" aria-label="Próxima foto">›</button>
+                </div>
+            </div>
+        </section>
+        <!-- ////////// End Home Page 4/4 ////////// -->
+
     </main>
 
     <script src="script.js"></script>
 </body>
-
 </html>

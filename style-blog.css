@@ -1,0 +1,257 @@
+:root {
+    --primary-bg: #f2a49e;
+    --secondary-bg: #fff;
+    --text-primary: #ffffff;
+    --accent-color: #8c3933;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+}
+
+/* Bloco Principal: Header */
+.header {
+    background-color: #8B322C;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+/* Elemento: Logo */
+.hotel-logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
+    line-height: 0.9;
+
+}
+
+.hotel-logo-brand {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hotel-logo-sub {
+    font-size: 14px;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+/* Elemento: Menu de Navegação */
+.header__menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.header__menu-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: opacity 0.3s;
+}
+
+.header__menu-link:hover {
+    opacity: 0.8;
+}
+
+/* Elemento: Botão (Call to Action) */
+.button {
+    background-color: #5D211D;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    background-color: #4a1a17;
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/noite-romantica-na-varanda-elegante.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__content {
+    color: var(--text-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 70vw;
+}
+
+.hero__h1 {
+    font-size: 4.5rem;
+}
+
+.hero__p {
+    font-size: 3rem;
+}
+
+.blog-posts__cards {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.blog-posts__title {
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 3rem;
+}
+
+.main__blog-posts {
+    background-color: var(--primary-bg);
+}
+
+.blog-posts__card {
+    width: 21.875rem;
+    background-color: var(--secondary-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts__card-image {
+    width: 100%;
+    height: 12.5rem;
+    display: block;
+}
+
+.blog-posts__card-content {
+    padding: 24px;
+}
+
+.blog-posts__card-title {
+    color: var(--accent-color);
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.blog-posts__card-description {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.blog-posts__card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-posts__card-date {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.apollo-footer {
+    background-color: #4a1f19;
+    /* Tom de marrom da imagem */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.info-item img {
+    width: 24px;
+}
+
+.map-container {
+    margin-bottom: 30px;
+}
+
+.map-img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid white;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.bottom-logo {
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+div.footer-logo {
+    display: inline-flex;
+    margin-right: 70%;
+}
