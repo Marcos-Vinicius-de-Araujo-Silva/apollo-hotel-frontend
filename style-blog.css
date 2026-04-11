@@ -130,7 +130,7 @@ body {
     font-size: 3rem;
 }
 
-.main__blog-posts {
+.bg-primary {
     background-color: var(--primary-bg);
 }
 

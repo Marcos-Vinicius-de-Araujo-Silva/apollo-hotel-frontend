@@ -645,3 +645,101 @@ input:focus {
         font-size: 1.75rem;
     }
 }
+
+.apollo-footer {
+    background-color: #4a1f19;
+    /* Tom de marrom da imagem */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.info-item img {
+    width: 24px;
+}
+
+.map-container {
+    margin-bottom: 30px;
+}
+
+.map-img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid white;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.bottom-logo {
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+div.footer-logo {
+    display: inline-flex;
+    margin-right: 70%;
+}
+
+.hotel-logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
+    line-height: 0.9;
+
+}
+
+.hotel-logo-brand {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hotel-logo-sub {
+    font-size: 14px;
+    text-align: right;
+    text-transform: capitalize;
+}
